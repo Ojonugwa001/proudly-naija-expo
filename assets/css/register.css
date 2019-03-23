@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@font-face {
+  font-family: SFProText-bold;
+  src: url("../fonts/SF-Pro-Text-Bold.woff");
+}
+
+@font-face {
+  font-family: SFProText;
+  src: url("../fonts/SF-Pro-Text-Regular.otf");
+}
+
+h1 {
+	font-family: SFProText-bold;
+	font-size: 50px;
+	line-height: 72px;
+	color: #008040;
+}
+
+ol {
+	font-family: SFProText;
+	font-size: 20px;
+	line-height: 29px;
+	color: #333333;
+}
+
+label {
+	font-family: SFProText;
+	font-size: 20px;
+	line-height: 29px;
+
+	color: #333333;
+
+}
+
+.form-input {
+	position: absolute;
+	width: 989px;
+	padding: 18px 22px 19px 22px;
+	border: 1px solid #4F4F4F;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+.form-grp {
+	top: 78px;
+	padding: 77px 150px 107px 150px;
+}
+

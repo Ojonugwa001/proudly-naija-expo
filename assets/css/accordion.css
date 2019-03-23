@@ -1,0 +1,84 @@
+ @font-face {
+  font-family: SFProText-bold;
+  src: url("../fonts/SF-Pro-Text-Bold.woff");
+}
+
+@font-face {
+  font-family: SFProText;
+  src: url("../fonts/SF-Pro-Text-Regular.otf");
+}
+
+.pnl-heading {
+  /*background: #028041;*/
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  padding: 11px 43px 13px 43px;
+}
+
+.pnl-default:nth-of-type(odd) .pnl-heading{
+  background:#F2F2F2;
+}
+
+.pnl-default:nth-of-type(even) .pnl-heading{
+  background:#FFFFFF;
+}
+/*.pnl-heading:nth-child(even) {
+  background: #FFFFFF;
+}*/
+
+.pnl-heading h4 {
+  font-family: SFProText;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #333333;
+}
+
+.pnl-heading a {
+  text-decoration: none;
+}
+
+.pnl-heading i {
+  vertical-align: middle; 
+  float: right;
+}
+
+/*.pnl-heading h4:nth-child(even){
+  color: #FFFFFF;
+}*/
+
+.pnl-body {
+    background: #F2F2F2;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    font-family: SFProText;
+    font-size: 16px;
+    line-height: 23px;
+    padding: 23px 37px 22px 42px;
+    letter-spacing: 0.03em;
+    color: #333333;
+}
+
+.pnl-default:nth-of-type(odd) .pnl-body{
+  background:#F2F2F2;
+}
+
+.pnl-default:nth-of-type(even) .pnl-body{
+  background:#FFFFFF;
+}
+
+.pnl-default .pnl-heading:hover h4, .pnl-default .pnl-heading.active h4 {
+  font-family: SFProText-bold;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.pnl-default .pnl-heading.active i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.pnl-default .pnl-heading:hover, .pnl-default .pnl-heading.active  {background:#028041}
