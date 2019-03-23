@@ -54,7 +54,7 @@
         	<div class="col-md-3">
         		<div class="row">
         			<div class="col-md-6">
-        				<h2 id="countdown">24<br><span>days</span></h2>
+        				<h2 id="countdown" class="days">00<br><span>days</span></h2>
         			</div>
 
         			<div class="col-md-6">
@@ -66,7 +66,7 @@
         	<div class="col-md-3">
         		<div class="row">
         			<div class="col-md-6">
-        				<h2 id="countdown">06<br><span>hours</span></h2>
+        				<h2 id="countdown" class="hours">00<br><span>hours</span></h2>
         			</div>
 
         			<div class="col-md-6">
@@ -78,7 +78,7 @@
         	<div class="col-md-3">
         		<div class="row">
         			<div class="col-md-6">
-        				<h2 id="countdown">22<br><span>minutes</span></h2>
+        				<h2 id="countdown" class="minutes">00<br><span>minutes</span></h2>
         			</div>
 
         			<div class="col-md-6">
@@ -90,12 +90,9 @@
         	<div class="col-md-3">
         		<div class="row">
         			<div class="col-md-12">
-        				<h2 id="countdown">59<br><span>seconds</span></h2>
+        				<h2 id="countdown" class="seconds">00<br><span>seconds</span></h2>
         			</div>
 
-        		<!-- 	<div class="col-md-6">
-        				<h2 id="countdown">:</h2>
-        			</div> -->
         		</div>
         	</div>
         </div>
@@ -231,8 +228,9 @@
 							<img src="assets/logo/logo3.png">
 						</div>
 					</div>
-
-					<div class="row" style="background: #1D2029; padding: 81px 140px 68px 140px;">
+					
+					<footer>
+						<div class="row" style="background: #1D2029; padding: 81px 140px 68px 140px;">
 						
 						<div class="col-md-3">
 							<img src="assets/logo/footer-logo.png" id="footer-logo">
@@ -284,6 +282,7 @@
 						</div>
 
 					</div>
+					</footer>
 
 				</div>
 
@@ -298,5 +297,35 @@
       </div>
     </div>
 
+    <script>
+    	function makeTimer() {
+
+			//var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
+			var endTime = new Date("01 Oct 2019 11:59:59 GMT+01:00");			
+			endTime = (Date.parse(endTime) / 1000);
+
+			var now = new Date();
+			now = (Date.parse(now) / 1000);
+
+			var timeLeft = endTime - now;
+
+			var days = Math.floor(timeLeft / 86400); 
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+			if (days < "10") { days = "0" + days; }
+			if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+
+			$(".days").html(days + "<br><span>days</span>");
+			$(".hours").html(hours + "<br><span>hours</span>");
+			$(".minutes").html(minutes + "<br><span>minutes</span>");
+			$(".seconds").html(seconds + "<br><span>seconds</span>");		
+		}
+
+		setInterval(function() { makeTimer(); }, 1000);
+    </script>
   </body>
 </html>
